@@ -1,0 +1,31 @@
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+
+type Country {
+  name: String
+  area: Float
+  population: Int
+  density: Float
+}
+
+type Log {
+  id: ID!
+  username: String!
+  requested_at: DateTime!
+  count: Int!
+  countries_details: [Country!]!
+}
+
+type Query {
+  densestCountries(limit: Int!, username: String!): [Country!]!
+    @field(resolver: "App\\GraphQL\\Resolvers\\CountryResolver@topDensity")
+  logs(from: DateTime, to: DateTime): [Log!]!
+    @field(resolver: "App\\GraphQL\\Resolvers\\LogResolver@list")
+}
+
+type Mutation {
+  updateLog(id: ID!, username: String!): Log!
+    @field(resolver: "App\\GraphQL\\Resolvers\\LogResolver@update")
+  deleteLog(id: ID!): Boolean!
+    @field(resolver: "App\\GraphQL\\Resolvers\\LogResolver@delete")
+}
