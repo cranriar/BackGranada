@@ -12,4 +12,15 @@ class LogRepository implements LogRepositoryInterface {
         if(!empty($filter['to']))   $q->where('requested_at','<=',$filter['to']);
         return $q->get();
     }
+
+    public function update(array $args = []) : Log {
+        $log = Log::findOrFail($args['id']);
+        $log->username = $args['username'];
+        $log->save();
+        return $log;
+    }
+    
+    public function delete(array $args = []): bool {
+        return Log::destroy($args['id']) > 0;
+    }
 }
