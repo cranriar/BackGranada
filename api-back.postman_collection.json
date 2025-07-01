@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "f42d1083-8b47-4a19-ab5b-1c9acd8d376d",
+		"name": "api-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7876473",
+		"_collection_link": "https://testgranada.postman.co/workspace/ApiGranada~50f7e07a-6b94-40e9-a4fa-14f90cd897a1/collection/7876473-f42d1083-8b47-4a19-ab5b-1c9acd8d376d?action=share&source=collection_link&creator=7876473"
+	},
+	"item": [
+		{
+			"name": "log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  logs(from: \"2025-06-01 00:00:00\", to: \"2025-06-24 23:59:59\") {\n    id,\n    username,\n    requested_at,\n    count\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateLog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  logs(from: \"2025-06-01 00:00:00\", to: \"2025-06-24 23:59:59\") {\n    id,\n    username,\n    requested_at,\n    count\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateLogLocal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  logs(from: \"2025-06-01 00:00:00\", to: \"2025-06-24 23:59:59\") {\n    id,\n    username,\n    requested_at,\n    count\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteLog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  logs(from: \"2025-06-01 00:00:00\", to: \"2025-06-24 23:59:59\") {\n    id,\n    username,\n    requested_at,\n    count\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogsLocal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  logs(from: \"2025-06-01 00:00:00\", to: \"2025-06-24 23:59:59\") {\n    id,\n    username,\n    requested_at,\n    count\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "densestCountries",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  densestCountries(limit: 50, username: \"este es otro usuario\") {\n    name,\n    area,\n    population,\n    density\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-147-237-106.us-east-2.compute.amazonaws.com/graphql",
+					"protocol": "http",
+					"host": [
+						"ec2-3-147-237-106",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
