@@ -2,6 +2,10 @@
 
 Este proyecto es una prueba técnica desarrollada en Laravel. El objetivo principal fue implementar una API backend siguiendo los requerimientos establecidos, realizando algunos cambios respecto a la propuesta original, como el uso de MySQL en lugar de PostgreSQL como base de datos.
 
+En esta prueba técnica se expone una URL pública que puede ser consultada desde cualquier dirección IP. La API está desplegada en una instancia EC2 de AWS, utilizando un servidor Apache2 para su ejecución.
+
+http://ec2-3-147-237-106.us-east-2.compute.amazonaws.com/graphql
+
 ## Cambios realizados
 
 - **Base de datos:**  
