@@ -64,6 +64,17 @@ Este proyecto es una prueba técnica desarrollada en Laravel. El objetivo princi
    
    php artisan serve
 
+## Colección de Postman
+
+Se incluye el archivo `api-back.postman_collection.json` para facilitar las pruebas de la API.  
+Puedes importarlo en Postman siguiendo estos pasos:
+
+1. Abre Postman.
+2. Haz clic en "Importar".
+3. Selecciona el archivo `api-back.postman_collection.json` que se encuentra en la raíz del proyecto.
+4. Accede a las peticiones preconfiguradas para probar los endpoints de la API.
+5. En la colección encontrarás ejemplos de peticiones tanto para un entorno local como para el ambiente desplegado en AWS, facilitando las pruebas en ambos escenarios.
+
 
 ## Notas
 
